@@ -1,0 +1,25 @@
+#header {
+  @include make-row();
+  position: fixed;
+  z-index: 3;
+  @include breakpoint(xs) {
+    z-index: 2;
+  }
+  top: 0;
+  width: 100%;
+  height: $headerHeight;
+  background-color: $theme-darker-color;
+  button {
+    font-size: 24px;
+  }
+
+  #logo {
+    @include make-sm-column(6);
+    @extend .hidden-xs;
+    img {
+      cursor: pointer;
+      margin-top: 16px;
+      width: 170px;
+    }
+  }
+}

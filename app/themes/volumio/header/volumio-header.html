@@ -1,0 +1,17 @@
+<div ng-if="!header.matchmediaService.isPhone">
+  <div id="logo">
+    <img
+        ng-src="{{variantAssetsUrl}}/graphics/{{variant}}-logo.png"
+        alt="{{header.themeManager.theme}}"
+        ui-sref="volumio.playback"/>
+  </div>
+
+  <player-buttons></player-buttons>
+
+  <side-menu></side-menu>
+</div>
+
+<ng-include
+    src="'app/themes/volumio/partials/volumio-tab-bar.html'"
+    ng-if="header.matchmediaService.isPhone">
+</ng-include>

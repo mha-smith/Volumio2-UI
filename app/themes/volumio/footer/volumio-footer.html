@@ -1,0 +1,11 @@
+<ng-include
+    src="'app/themes/volumio/partials/volumio-tab-bar.html'"
+    ng-if="!footer.matchmediaService.isPhone">
+</ng-include>
+<div ng-if="footer.matchmediaService.isPhone" id="phoneFooter">
+  <volume-manager type="slider"></volume-manager>
+
+  <player-buttons></player-buttons>
+
+  <side-menu></side-menu>
+</div>
